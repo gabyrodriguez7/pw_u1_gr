@@ -1,15 +1,133 @@
 <!DOCTYPE html><!--Declara el tipo de documento con el que voy a trabajar: HTML5-->
 <html lang="en"><!--html:elemento raiz de toda Pagina web, atributo indica contenido en ingles-->
+
 <head><!--Cabezera: donde se pone toda la configuracion de la pagina, lo que no es visible para el usuario final-->
-    <meta charset="UTF-8"><!--Define la codificacion de caracteres de mi pagina web, el estandar de facto para paginas Web es UTF-8-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Sirve para implementar paginas web responsivas(Se adapta al tamaño de display)-->
+    <meta charset="UTF-8">
+    <!--Define la codificacion de caracteres de mi pagina web, el estandar de facto para paginas Web es UTF-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Sirve para implementar paginas web responsivas(Se adapta al tamaño de display)-->
     <title>Mi primera pagina web</title><!--Para darle un titulo a mi pagina-->
 </head>
-<body><!--Cuerpo: Corresponde al contenido visual de mi pagina web, es decir todo lo que el usuario visualiza en pantalla-->
-    <h1>Mi primera página web</h1><!--Para poner encabezados desde h1 hasta h6-->
-    <h3>Carrera de computación</h3>
-    <h6>Gabriela Rodríguez</h6>
-    <p>Este es el primer parrafo de mi página web ................</p>
-    <button>Aceptar</button>
+
+<body>
+    <!--Cuerpo: Corresponde al contenido visual de mi pagina web, es decir todo lo que el usuario visualiza en pantalla-->
+    <header> <!--Cabecera-->
+        <h1>Universidad Central del Ecuador</h1>
+        <h3>Carrera de computación</h3>
+    </header>
+    <nav></nav><!--Barra de navegacion-->
+    <section>
+        <!--Cabeceras de Secciones-->
+        <h1>Mi primera página web</h1><!--Para poner encabezados desde h1 hasta h6-->
+        <h6>Gabriela Rodríguez</h6>
+
+        <!--Parrafos-->
+        <p>Este es el primer parrafo de mi página web ................</p>
+        <span>Parrafos más cortos</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nemo ipsa eius molestiae exercitationem ut
+            totam quo, delectus qui neque?</p>
+        <!--textos-->
+        <hr>
+        <strong>Texto de importancia que quiero resaltar</strong>
+        <br>
+        <br>
+        <br>
+        <br>
+        <b>Textos que no quiero darle relevancia</b>
+        <br>
+        <em>Texto en cursiva con importancia</em>
+        <br>
+        <i>Texto en cursiva sin importancia</i>
+        <br>
+        <u>Texto subrayado</u>
+        <br>
+        <hr><!--Linea Recta-->
+        <br>
+        <s>Texto eliminado</s>
+        <mark>Texto Resaltado</mark>
+
+        <!--Listas-->
+        <ul>
+            <li>Ventas</li>
+            <li>Compras</li>
+            <li>Inventario</li>
+        </ul>
+
+        <ol>
+            <li>Ventas</li>
+            <li>Compras</li>
+            <li>Inventario</li>
+        </ol>
+
+        <!--tablas-->
+        <table border="1">
+            <thead></thead>
+            <!--Primero declaro la fila-->
+            <tr>
+                <!--Como contenido de la fila declaro todas las columnas-->
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>CI</th>
+                <th>Genero</th>
+                <th>Acción</th>
+            </tr>
+            <tbody>
+                <!--Primero declaro la fila-->
+                <tr>
+                    <td>1</td>
+                    <td>Gabriela</td>
+                    <td>Rodríguez</td>
+                    <td>1750121178</td>
+                    <td>Femenino</td>
+                    <td><button>Editar</button></td>
+                </tr>
+                <!--Por cada fila es un elemento HTML: tr-->
+                <tr>
+                    <td>2</td>
+                    <td>Daniel</td>
+                    <td>Leon</td>
+                    <td>174654359</td>
+                    <td>Masculino</td>
+                    <td><button>Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!--Contenedores (Elementos que agrupan contenido que tiene un objetivo en común)-->
+        <div>
+            <!--Son contenedores/ agrupadores tambien header, nav, section, aside, footer-->
+        </div>
+
+        <!--Formularios(Sirve para ejecurar una acción)-->
+        <form action="">
+            <label for="id_nombre">Nombre: </label><!--Pone los textos vizuales d emi formulario-->
+            <input type="text" id="id_nombre">
+            <label for="id_password">Password: </label>
+            <input type="password" id="id_password">
+            <label for="id_fecha">Fecha Nacimiento: </label>
+            <input type="date" id="id_fecha">
+            <br>
+            <label for="id_edad">Edad: </label>
+            <input type="number" id="id_edad">
+            <button>Guardar</button>
+        </form>
+        <br>
+        <!--Multimedia-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png"
+            alt="No se puede vizualizar" width="200" height="200">
+        <br>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <br>
+        <button>Aceptar</button>
+    </section>
+    <aside></aside>
+
+    <footer>
+        <h3>Todos los derechos Reservados</h3>
+    </footer>
 </body>
+
 </html><!--Etiqueta de cierre de html-->
