@@ -1,33 +1,27 @@
-let num1 = 0;  
-let num2 = 0; 
-let esSegundo = "0";  
+let num1 = 0;
+let num2 = 0;
+let resultado = 0;
 
 
 function mostrarEnDisplay(valor) {
     let elementoDisplay = document.getElementById('id_display');
-    elementoDisplay.innerText += valor;  
+    elementoDisplay.innerText += valor;
+    console.log("Valor mostrado en display: " + elementoDisplay.innerText);
+    textoCompleto = elementoDisplay.innerText;
 
-    if(valor !== "+"){
-        
-    }
-
-}
-
-function operacionSuma(){
-esSegundo = "1";
-}
-
-function concatenarNum () {
-    if(esSegundo === "0"){
-        num1 = num1 + numero;
-
-    }else{
-        num2 = num2 + numero;
+    for (let numero of textoCompleto) {
+        if (numero === "+") {
+            num1 = parseFloat( textoCompleto.substring(0, textoCompleto.indexOf(numero)));
+            num2 = parseFloat(textoCompleto.substring(textoCompleto.indexOf(numero) + 1, textoCompleto.length));
+        }
     }
 }
- function sumar(){
-    let numPrimero = parseFloat(num1);
-    let numSegundo = parseFloat(num2);
-    let elemntoDisply = document.getElementById('id_display');
-    elemntoDisply.innerText = numPrimero + num2;
- }
+
+function suma() {
+    textoCompleto = document.getElementById('id_display').innerText = num1 + num2;
+}
+
+function borrar(){
+    textoCompleto = document.getElementById('id_display').innerText = "";
+
+}
